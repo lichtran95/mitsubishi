@@ -47,7 +47,7 @@
 		.bl-modal-heading{display:flex;justify-content:space-between;align-items:center;height:50px;@include padding(null $gutter);border-bottom:1px solid $border;
 			span{color:$text;font-size:$size-large;font-weight:$weight-semibold}
 			.func-close-modal{flex-shrink:0;@include size(50px);margin-right:-$gutter;color:inherit;
-				[class^=icn]{display:inline-block;@include size(50px);@include padding(15px);font-size:1.25rem;vertical-align:middle}
+				img{display:inline-block;@include size(50px);@include padding(15px);font-size:1.25rem;vertical-align:middle}
 			}
 		}
 		.bl-modal-context{@include padding($gutter);

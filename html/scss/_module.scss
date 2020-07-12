@@ -205,7 +205,14 @@ opacity: 0.4;
 	.context-gallery{margin-top:20px;
 		.list{
 			.item{
-				a{background: #fff;@include padding(20px);border:1px solid tint(#141414,80%);display: block;width:100%;margin-bottom:20px;}
+				a{background: #fff;border:1px solid tint(#141414,80%);display: block;width:100%;margin-bottom:20px;overflow: hidden;transition:all 400ms ease;
+					span.img{display:block;@extend %backgroundCover--center;@include size(100%);transition:all 400ms ease;
+						&:after{display:block;content:'';padding-top:100%;}
+					}
+					&:hover{
+						span.img{transform:scale(1.2);}
+					}
+				}
 			}
 		}
 	}
@@ -213,9 +220,15 @@ opacity: 0.4;
 .fancybox-button--zoom{display:none !important}
 .regiser-successfully{transition:all 1s ease;position: fixed;overflow:hidden;right:-150%;bottom:30px;z-index: 99999;
 	background-color:#fff;border-radius:4px;border:1px solid #f2f4f8;box-shadow: 0px 2px 6px rgba(0,0,0,0.2);@include padding(10px 20px);max-width:300px;
-	[class^="icn"]{color:#1DB134}
-	span{font-size:14px;}
+	span{margin-left:5px;font-size:14px;}
 	&:after{@include position(absolute, 0 null null 0);width:4px;height:100%;background-color:#1DB134;content:'';}
+	&.is-submited{right:2%;
+	}
+}
+.regiser-error{transition:all 1s ease;position: fixed;overflow:hidden;right:-150%;bottom:80px;z-index: 99999;
+	background-color:#fff;border-radius:4px;border:1px solid #f2f4f8;box-shadow: 0px 2px 6px rgba(0,0,0,0.2);@include padding(10px 20px);max-width:300px;
+	span{margin-left:5px;font-size:14px;}
+	&:after{@include position(absolute, 0 null null 0);width:4px;height:100%;background-color:#E22A2A;content:'';}
 	&.is-submited{right:2%;
 	}
 }
@@ -266,7 +279,7 @@ opacity: 0.4;
 				span{display: none;}
 			}
 		}
-		.context-product{margin-top:0;}
+		.context-product{margin-top:20px;}
 	}
 	.module-content-tabs{
 		.content-tabs{
@@ -310,7 +323,7 @@ opacity: 0.4;
 				span{display: none;}
 			}
 		}
-		.context-table-price{margin-top:0;
+		.context-table-price{margin-top:20px;
 			ul.table-price-list{margin-bottom:40px;
 				li.item{
 					.item-content{
