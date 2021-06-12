@@ -1301,7 +1301,7 @@ html {
     -webkit-transform: translateY(0);
         -ms-transform: translateY(0);
             transform: translateY(0);
-    max-width: 375px;
+    padding: 0 16px;
     text-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1320,7 +1320,7 @@ html {
   }
   .section-hero .context-hero p {
     color: #fff;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 22px;
   }
   .section-hero .context-hero .cta {
@@ -1468,13 +1468,13 @@ html {
 @media (max-width: 568px) {
   .section-introduction .context {
     padding-top: 80px;
-    max-width: 375px;
+    padding-right: 20px;
+    padding-left: 20px;
   }
   .section-introduction .context h2 {
     margin-bottom: 24px;
     font-size: 22px;
     text-align: left;
-    padding: 0 20px;
   }
   .section-introduction .context h2:after {
     max-width: 200px;
@@ -1484,8 +1484,6 @@ html {
   .section-introduction .context .desc {
     font-size: 16px;
     line-height: 24px;
-    max-width: 375px;
-    padding: 0 20px;
     text-align: left;
     margin-left: auto;
     margin-right: auto;
@@ -1501,8 +1499,8 @@ html {
         flex-wrap: wrap;
   }
   .section-introduction .context ul li {
-    padding: 20px;
     width: 100%;
+    padding: 20px 0;
   }
 }
 
@@ -1701,7 +1699,6 @@ html {
     padding-top: 60px;
   }
   .section-why .context {
-    max-width: 375px;
     padding: 20px;
     margin: 0;
     display: block;
@@ -1731,6 +1728,7 @@ html {
             transform: scale(1);
     width: 100%;
     display: block;
+    margin: 0 auto;
     margin-bottom: 16px;
   }
   .section-why .context .context-left {
@@ -1876,9 +1874,13 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .section-looking .context .context-right ul li {
-  width: 50%;
+  width: 100%;
 }
 .section-looking .context .context-right ul li a {
   display: block;
@@ -1888,7 +1890,7 @@ html {
 }
 .section-looking .context .context-right ul li:last-child {
   margin-left: auto;
-  padding-left: 24px;
+  padding-left: 0;
 }
 @media (max-width: 1024px) {
   .section-looking {
@@ -1965,6 +1967,95 @@ html {
     margin-top: 32px;
   }
 }
+@media (max-width: 568px) {
+  .section-looking {
+    padding-top: 80px;
+  }
+  .section-looking .context {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding: 0 20px;
+  }
+  .section-looking .context .context-left .block-image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    margin-top: 32px;
+  }
+  .section-looking .context .context-left .block-image img {
+    width: 50%;
+  }
+  .section-looking .context .context-left .block-image:after {
+    display: none;
+  }
+  .section-looking .context .context-left .block-image:before {
+    display: none;
+  }
+  .section-looking .context .context-left .block-image img {
+    position: unset;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+    display: block;
+    width: 100%;
+    -webkit-transform: unset;
+        -ms-transform: unset;
+            transform: unset;
+    margin-bottom: 16px;
+  }
+  .section-looking .context .context-left .block-image .img-01 {
+    margin-bottom: 16px;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  .section-looking .context .context-left .block-image .img-02 {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    width: 100%;
+    padding: 0;
+  }
+  .section-looking .context .context-left .block-image .img-03 {
+    width: 100%;
+    padding: 0;
+  }
+  .section-looking .context .context-right {
+    padding-left: 0;
+    padding-top: 16px;
+  }
+  .section-looking .context .context-right h2 {
+    font-size: 28px;
+  }
+  .section-looking .context .context-right h2:after {
+    top: 15px;
+    left: 0;
+    width: 200px;
+  }
+  .section-looking .context .context-right ul {
+    margin-top: 32px;
+    display: block;
+  }
+  .section-looking .context .context-right ul li {
+    width: 100%;
+  }
+  .section-looking .context .context-right ul li a {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  .section-looking .context .context-right ul li:last-child {
+    margin-left: auto;
+    padding-left: 0;
+  }
+}
 
 .section-process {
   margin-top: 150px;
@@ -2016,7 +2107,6 @@ html {
     max-width: 1208px;
     margin: 0 auto;
     padding: 0 20px;
-    overflow-x: scroll;
   }
   .section-process .context h2 {
     font-size: 28px;
@@ -2045,8 +2135,9 @@ html {
   }
   .section-process .context img {
     display: block;
-    max-width: unset;
-    padding-right: 50px;
+    max-width: 100%;
+    padding-right: 0;
+    width: 100%;
   }
 }
 
@@ -2320,7 +2411,7 @@ html {
     background-color: #ffda00;
     top: 350px;
     width: 100%;
-    height: 100px;
+    height: 150px;
     border-top-right-radius: 0;
     z-index: 0;
     left: 0;
