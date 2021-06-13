@@ -17,6 +17,7 @@
     <meta property="og:description" content="">
     <meta property="og:image" content="">
     <link rel="icon" type="image/ico" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css">
     <link href="css/layout.css" rel="stylesheet" type="text/css">
     <style></style>
   </head>
@@ -97,15 +98,15 @@
               <h2>We are looking for</h2>
               <div class="caption">New graduates and young professionals with maximum of two-year working experience with background:</div>
               <ul>
-                <li><a href="#!">Service Sciences</a><a href="#!">Information Technology</a><a href="#!">Human-Computer Interaction</a><a href="#!">Computer Science</a></li>
-                <li><a href="#!">Business Information System</a><a href="#!">E-commeerce</a><a href="#!">Business Administration</a><a href="#!">International Economics</a></li>
+                <li><a href="#!">Service Science</a><a href="#!">Information Technology</a><a href="#!">Human-Computer Interaction</a><a href="#!">Computer Science</a></li>
+                <li><a href="#!">Business Information System</a><a href="#!">E-commerce</a><a href="#!">Business Administration</a><a href="#!">International Economics</a></li>
               </ul>
             </div>
           </div>
         </section>
         <section class="section-process">
           <div class="context">
-            <h2>Recruitment & Training process</h2><img src="images/map.png" alt="">
+            <h2>Recruitment & Training process</h2><img src="images/map.png" alt=""><img class="img-mb" src="images/map_mb.png" alt="">
           </div>
         </section>
         <section class="section-news">
@@ -142,17 +143,17 @@
         <section class="section-faq">
           <div class="context">
             <div class="context-left">
-              <h2>Frequently<br>asked<br>questions</h2>
+              <h2>Frequently<br> asked<br> questions</h2>
             </div>
             <div class="context-right">
               <div class="list-faq">
                 <div class="item-faq is-active">
                   <div class="heading">
                     <div class="wrap-img"><img class="img-default" src="images/img_default.png" alt=""><img class="img-opened" src="images/img_opened.png" alt=""></div>
-                    <p>How many trainees are there?</p>
+                    <p>How many candidates are selected?</p>
                   </div>
                   <div class="content">
-                    <p>We are looking for 15 bright minds. However, in order to ensure the program quality, there is no official quota.</p>
+                    <p>We are looking for 15 bright minds. However, in order to ensure the program quality, there is no official quota</p>
                   </div>
                 </div>
                 <div class="item-faq">
@@ -172,7 +173,7 @@
                     <p>Are trainees able to choose a specific Zalo product to work on it?</p>
                   </div>
                   <div class="content">
-                    <p>Are trainees able to choose a specific Zalo product to work on it?</p>
+                    <p>During the competency interview, a candidate's preference is noted and paired with their experience and skill level. Mentors will then assign a specific Zalo product that is the best match.</p>
                   </div>
                 </div>
                 <div class="item-faq">
@@ -214,6 +215,15 @@
       	let wrapperGroup = document.getElementsByClassName('section-process')[0];
       	let offsetTop = wrapperGroup.getBoundingClientRect().top;
       	let heightRect = wrapperGroup.getBoundingClientRect().height;
+      	if(offsetTop >= 2916){
+      		$(".float .img-1").addClass("is-hide");
+      		$(".float .img-2").removeClass("is-hide");
+      
+      	}if(offsetTop <= 2918){
+      		$(".float .img-1").removeClass("is-hide");
+      		$(".float .img-2").addClass("is-hide");
+      
+      	}
       	if(offsetTop <= 710){
       		$(".float .img-1").addClass("is-hide");
       		$(".float .img-2").removeClass("is-hide");
@@ -224,10 +234,10 @@
       		$(".float .img-2").addClass("is-hide");
       
       	}
-      	if(offsetTop > 710){
-      		$(".float .img-1").removeClass("is-hide");
-      		$(".float .img-2").addClass("is-hide");
-      	}
+      	//- if(offsetTop > 710){
+      	//- 	$(".float .img-1").removeClass("is-hide");
+      	//- 	$(".float .img-2").addClass("is-hide");
+      	//- }
       	console.log(offsetTop)
       });
     </script>

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=vietnamese");
 /* --------------------------------
 Nucleo Web Font
 Generated using nucleoapp.com
@@ -833,7 +834,7 @@ Generated using nucleoapp.com
 body, html {
   padding: 0;
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Gilroy", sans-serif;
   color: #000000;
 }
 
@@ -1236,8 +1237,10 @@ html {
   transition: all 300ms ease;
 }
 .section-hero .context-hero .cta:hover {
-  -webkit-box-shadow: 0px 0 32px rgba(255, 255, 255, 0.24);
-          box-shadow: 0px 0 32px rgba(255, 255, 255, 0.24);
+  background-color: #0068ff;
+  color: #fff;
+  -webkit-box-shadow: 0px 0 32px rgba(255, 255, 255, 0.16);
+          box-shadow: 0px 0 32px rgba(255, 255, 255, 0.16);
 }
 @media (max-width: 1440px) {
   .section-hero .context-hero {
@@ -1283,7 +1286,7 @@ html {
     margin-top: 200px;
   }
   .section-hero .context-hero p {
-    color: #fff;
+    color: #9fe2ff;
     font-size: 22px;
     line-height: 32px;
   }
@@ -1295,13 +1298,19 @@ html {
   }
 }
 @media (max-width: 568px) {
+  .section-hero {
+    background-image: url("../images/header_banner_mb.png") !important;
+  }
+  .section-hero:after {
+    padding-top: 87%;
+  }
   .section-hero .context-hero {
-    position: unset;
-    top: unset;
-    -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-            transform: translateY(0);
-    padding: 0 16px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    padding: 0 10px;
     text-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1310,24 +1319,26 @@ html {
         -ms-flex-align: center;
             align-items: center;
     margin-right: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
   }
   .section-hero .context-hero img {
-    width: 200px;
+    width: 170px;
     display: block;
     margin: 0 auto;
     margin-bottom: 24px;
-    margin-top: 100px;
   }
   .section-hero .context-hero p {
-    color: #fff;
-    font-size: 15px;
+    color: #9fe2ff;
+    font-size: 14px;
     line-height: 22px;
   }
   .section-hero .context-hero .cta {
     margin-top: 24px;
-    width: 200px;
-    height: 48px;
-    font-size: 18px;
+    width: 160px;
+    height: 40px;
+    font-size: 16px;
   }
 }
 
@@ -1341,6 +1352,8 @@ html {
   position: relative;
   margin-bottom: 32px;
   font-size: 38px;
+  position: relative;
+  z-index: 1;
 }
 .section-introduction .context h2:after {
   content: "";
@@ -1358,7 +1371,7 @@ html {
   color: #666666;
   font-size: 16px;
   line-height: 24px;
-  max-width: 920px;
+  max-width: 877px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -1376,7 +1389,7 @@ html {
   padding: 0 38px;
 }
 .section-introduction .context ul li .item {
-  padding: 46px 28px;
+  padding: 46px 43px;
   border-radius: 12px;
 }
 .section-introduction .context ul li .item .img img {
@@ -1390,7 +1403,7 @@ html {
   margin-top: 32px;
 }
 .section-introduction .context ul li .item p {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 22px;
   margin-top: 16px;
   text-align: center;
@@ -1462,7 +1475,7 @@ html {
     padding: 46px 8px;
   }
   .section-introduction .context ul li .item h3 {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 @media (max-width: 568px) {
@@ -1474,12 +1487,10 @@ html {
   .section-introduction .context h2 {
     margin-bottom: 24px;
     font-size: 22px;
-    text-align: left;
   }
   .section-introduction .context h2:after {
-    max-width: 200px;
-    left: 0;
-    right: unset;
+    bottom: 20px;
+    max-width: 250px;
   }
   .section-introduction .context .desc {
     font-size: 16px;
@@ -1501,6 +1512,12 @@ html {
   .section-introduction .context ul li {
     width: 100%;
     padding: 20px 0;
+  }
+  .section-introduction .context ul li .item h3 {
+    font-size: 18px;
+  }
+  .section-introduction .context ul li .item p {
+    padding: 0 20px;
   }
 }
 
@@ -1591,6 +1608,7 @@ html {
   font-size: 38px;
   position: relative;
   margin-left: 56px;
+  z-index: 1;
 }
 .section-why .context .context-left h2:after {
   content: "";
@@ -1715,29 +1733,55 @@ html {
   .section-why .context .context-right .image-under img {
     max-width: 100%;
     margin-left: 0;
+    margin-top: -50px;
   }
   .section-why .context .context-right .block-image {
+    position: relative;
     width: 100%;
-    height: auto;
+    height: 400px;
   }
   .section-why .context .context-right .block-image:after {
-    display: none;
-  }
-  .section-why .context .context-right .block-image:before {
-    display: none;
+    display: block;
+    content: "";
+    background-color: #9fe1ff;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 280px;
+    height: 180px;
+    border-bottom-right-radius: 40px;
+    z-index: 0;
+    right: 0;
   }
   .section-why .context .context-right .block-image img {
-    position: unset;
-    -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-            transform: scale(1);
-    width: 100%;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 16px;
+    position: absolute;
+    -webkit-transform: scale(0.85);
+        -ms-transform: scale(0.85);
+            transform: scale(0.85);
   }
-  .section-why .context .context-right .block-image .img-01, .section-why .context .context-right .block-image .img-02, .section-why .context .context-right .block-image .img-03 {
-    max-width: 100%;
+  .section-why .context .context-right .block-image .img-01 {
+    right: 0;
+    top: 0;
+    z-index: 1;
+    max-width: 170px;
+  }
+  .section-why .context .context-right .block-image .img-02 {
+    left: 0;
+    top: 100px;
+    z-index: 3;
+    max-width: 170px;
+  }
+  .section-why .context .context-right .block-image .img-03 {
+    bottom: 60px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    max-width: 270px;
+    -webkit-box-shadow: 0px 0 32px rgba(0, 0, 0, 0.24);
+            box-shadow: 0px 0 32px rgba(0, 0, 0, 0.24);
+    z-index: 2;
   }
   .section-why .context .context-left {
     padding-top: 0;
@@ -1746,17 +1790,19 @@ html {
   .section-why .context .context-left h2 {
     font-size: 22px;
     margin-left: 0;
+    text-align: center;
   }
   .section-why .context .context-left h2:after {
-    top: 25px;
-    left: 0;
+    top: 10px;
+    left: 160px;
     background-color: #d9f0fd;
     max-width: 440px;
-    height: 20px;
-    width: 200px;
+    height: 16px;
+    width: 100px;
     z-index: -1;
   }
   .section-why .context .context-left ul {
+    margin: 0 auto;
     margin-top: 38px;
   }
   .section-why .context .context-left ul li {
@@ -1862,6 +1908,7 @@ html {
 .section-looking .context .context-right h2 {
   font-size: 38px;
   position: relative;
+  z-index: 1;
 }
 .section-looking .context .context-right h2:after {
   content: "";
@@ -1877,30 +1924,25 @@ html {
 .section-looking .context .context-right .caption {
   margin-top: 16px;
   line-height: 24px;
-  color: #666666;
+  font-weight: 600;
 }
 .section-looking .context .context-right ul {
   margin-top: 48px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 .section-looking .context .context-right ul li {
-  width: 100%;
+  width: 50%;
 }
 .section-looking .context .context-right ul li a {
   display: block;
   font-size: 18px;
-  font-weight: bold;
   margin-bottom: 24px;
 }
 .section-looking .context .context-right ul li:last-child {
   margin-left: auto;
-  padding-left: 0;
+  padding-left: 24px;
 }
 @media (max-width: 1024px) {
   .section-looking {
@@ -1992,56 +2034,72 @@ html {
             flex-direction: column-reverse;
     padding: 0 20px;
   }
-  .section-looking .context .context-left .block-image {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+  .section-looking .context .context-left {
     width: 100%;
-    height: auto;
-    margin-left: 0;
-    margin-top: 32px;
   }
-  .section-looking .context .context-left .block-image img {
-    width: 50%;
+  .section-looking .context .context-left .block-image {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin-left: 0;
   }
   .section-looking .context .context-left .block-image:after {
-    display: none;
+    content: "";
+    display: block;
+    background-color: #02bd74;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 100%;
+    height: 200px;
+    border-bottom-left-radius: 40px;
+    z-index: 0;
+    right: 0;
   }
   .section-looking .context .context-left .block-image:before {
-    display: none;
+    content: "";
+    display: block;
+    background-color: #a097f5;
+    position: absolute;
+    bottom: -10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    z-index: 0;
+    right: 220px;
   }
   .section-looking .context .context-left .block-image img {
-    position: unset;
+    position: absolute;
     -webkit-transform: scale(1);
         -ms-transform: scale(1);
             transform: scale(1);
-    display: block;
-    width: 100%;
-    -webkit-transform: unset;
-        -ms-transform: unset;
-            transform: unset;
-    margin-bottom: 16px;
   }
   .section-looking .context .context-left .block-image .img-01 {
-    margin-bottom: 16px;
-    width: 100%;
-    margin-bottom: 16px;
-    max-width: 100%;
+    -webkit-box-shadow: 0px 0 32px rgba(0, 0, 0, 0.24);
+            box-shadow: 0px 0 32px rgba(0, 0, 0, 0.24);
+    z-index: 2;
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+    top: 30px;
+    max-width: 70%;
   }
   .section-looking .context .context-left .block-image .img-02 {
-    -webkit-transform: none;
-        -ms-transform: none;
-            transform: none;
-    width: 100%;
-    padding: 0;
-    max-width: 100%;
+    top: 150px;
+    -webkit-transform: translateY(0%) scale(1);
+        -ms-transform: translateY(0%) scale(1);
+            transform: translateY(0%) scale(1);
+    left: 0;
+    max-width: 300px;
+    z-index: 3;
   }
   .section-looking .context .context-left .block-image .img-03 {
-    width: 100%;
-    padding: 0;
-    max-width: 100%;
+    top: 280px;
+    right: 50px;
+    z-index: 1;
+    max-width: 300px;
   }
   .section-looking .context .context-right {
     padding-left: 0;
@@ -2049,11 +2107,17 @@ html {
   }
   .section-looking .context .context-right h2 {
     font-size: 28px;
+    text-align: center;
   }
   .section-looking .context .context-right h2:after {
     top: 15px;
     left: 0;
+    right: 0;
+    margin: 0 auto;
     width: 200px;
+  }
+  .section-looking .context .context-right .caption {
+    text-align: center;
   }
   .section-looking .context .context-right ul {
     margin-top: 32px;
@@ -2067,6 +2131,7 @@ html {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 16px;
+    text-align: center;
   }
   .section-looking .context .context-right ul li:last-child {
     margin-left: auto;
@@ -2110,6 +2175,9 @@ html {
   display: block;
   max-width: 100%;
 }
+.section-process .context .img-mb {
+  display: none;
+}
 @media (max-width: 1024px) {
   .section-process {
     margin-top: 80px;
@@ -2151,10 +2219,15 @@ html {
     margin-bottom: 50px;
   }
   .section-process .context img {
-    display: block;
+    display: none;
     max-width: 100%;
     padding-right: 0;
     width: 100%;
+  }
+  .section-process .context .img-mb {
+    display: block;
+    margin: 0 auto;
+    width: 235px;
   }
 }
 
@@ -2301,7 +2374,6 @@ html {
 .section-news .context .context-left .bl-list-news .swiper-wrapper .swiper-slide .des-news {
   text-align: center;
   font-size: 1em;
-  font-family: "Roboto", sans-serif !important;
   margin-top: 16px;
   display: block;
 }
@@ -2411,7 +2483,6 @@ html {
   .section-news .context .context-left .bl-list-news .swiper-wrapper .swiper-slide .des-news {
     text-align: center;
     font-size: 1em;
-    font-family: "Roboto", sans-serif !important;
     margin-top: 16px;
     display: block;
   }
@@ -2426,10 +2497,9 @@ html {
   .section-news:after {
     content: "";
     background-color: #ffda00;
-    top: 350px;
-    width: 100%;
-    height: 150px;
-    border-top-right-radius: 0;
+    top: -50px;
+    width: 36%;
+    height: 420px;
     z-index: 0;
     left: 0;
     right: 0;
@@ -2459,23 +2529,17 @@ html {
     padding-left: 0;
   }
   .section-news .context .context-right h2 {
-    font-size: 22px;
+    font-size: 28px;
     position: relative;
     text-align: center;
   }
   .section-news .context .context-right h2:before {
-    background-size: 120px 80px;
-    width: 120px;
-    top: 17px;
-    left: -30px;
-    right: 0;
-    margin: 0 auto;
-    height: 80px;
+    display: none;
   }
   .section-news .context .context-left {
     width: 100%;
     padding-left: 0;
-    padding-top: 100px;
+    padding-top: 20;
   }
   .section-news .context .context-left .block-swiper {
     position: relative;
@@ -2542,7 +2606,6 @@ html {
   .section-news .context .context-left .bl-list-news .swiper-wrapper .swiper-slide .des-news {
     text-align: center;
     font-size: 1em;
-    font-family: "Roboto", sans-serif !important;
     margin-top: 16px;
     display: block;
   }
@@ -2579,6 +2642,7 @@ html {
 .section-faq .context .context-left h2 {
   font-size: 38px;
   position: relative;
+  z-index: 1;
 }
 .section-faq .context .context-left h2:after {
   content: "";
@@ -2631,7 +2695,6 @@ html {
 }
 .section-faq .context .context-right .list-faq .item-faq .content p {
   font-size: 16px;
-  font-family: "Roboto", sans-serif;
   max-width: 692px;
   margin-top: 8px;
 }
@@ -2673,7 +2736,6 @@ html {
   }
   .section-faq .context .context-right .list-faq .item-faq .content p {
     font-size: 16px;
-    font-family: "Roboto", sans-serif;
     line-height: 24px;
     max-width: 692px;
     margin-top: 8px;
@@ -2702,9 +2764,17 @@ html {
   }
   .section-faq .context .context-left h2 {
     font-size: 28px;
+    text-align: center;
+  }
+  .section-faq .context .context-left h2 br {
+    display: none;
   }
   .section-faq .context .context-left h2:after {
     width: 120px;
+    right: 50px;
+    left: unset;
+    top: 16px;
+    bottom: unset;
   }
   .section-faq .context .context-right {
     margin-top: 48px;
@@ -2727,7 +2797,6 @@ html {
   }
   .section-faq .context .context-right .list-faq .item-faq .content p {
     font-size: 16px;
-    font-family: "Roboto", sans-serif;
     line-height: 24px;
     max-width: 692px;
     margin-top: 8px;
